@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Car;
 
+use App\Http\Resources\CarCollection;
+use App\Http\Resources\Car as CarResource;
+
 class CarController extends Controller
 {
     /**
@@ -17,6 +20,16 @@ class CarController extends Controller
         $cars = Car::all();
 
         return view('cars.index', compact('cars'));
+
+      
+
+       // PARA DEVOLVER UN JSON USO ESTE RETURN
+       // USAMOS API RESOURCES DE LA DOCUMENTACION OFICIAL. 
+       // return new CarCollection(Car::all());
+
+
+
+
     }
 
     /**
@@ -59,10 +72,13 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+     public function show($id)
+     {
+
+        // DEVUELVE UN JSON PORQUE ESTAMOS USANDO EL RESOURCES
+         return new CarResource(Car::find(1));
+     }
+
 
     /**
      * Show the form for editing the specified resource.
