@@ -8,6 +8,8 @@ use App\Car;
 use App\Http\Resources\CarCollection;
 use App\Http\Resources\Car as CarResource;
 
+use Illuminate\Support\Facades\DB;
+
 class CarController extends Controller
 {
     /**
@@ -17,7 +19,19 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::all();
+
+        //Todos estos ejemplos andan
+        //$cars = Car::all();
+        
+        //ejemplos de uso
+        //este use es para el ejemplo que hay aca abajo: use Illuminate\Support\Facades\DB;
+        //$cars = DB::table('cars')->paginate(5);
+
+        //$cars = Car::where('brand', 'ford', 100)->paginate(15);
+
+        //$cars = Car::where('brand', 'ford', 100)->paginate(15);
+
+        $cars = Car::paginate(5);
 
         return view('cars.index', compact('cars'));
 
