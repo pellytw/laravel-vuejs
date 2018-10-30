@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');    
-});
+// Route::get('/', function () {
+//     return view('welcome');    
+// });
 
-Route::resource('cars', 'CarController');
+Route::resource('backend/cars', 'CarController');
 
 Auth::routes();
 

@@ -4,6 +4,7 @@
 
         <p>
             <router-link :to="{ name: 'example-component' }">Example Component</router-link>
+            <router-link :to="{ name: 'car-component' }">Car Component</router-link>
         </p>
 
         <div class="container">
@@ -13,4 +14,4 @@
 </template>
 <script>
     export default {}
-</script
+</script>

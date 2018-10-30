@@ -30,6 +30,7 @@ Vue.use(VueRouter)
 
 import App from './components/App'
 import ExampleComponent from './components/ExampleComponent'
+import CarComponent from './components/CarComponent'
 
 const router = new VueRouter({
     mode: 'history',
@@ -39,6 +40,11 @@ const router = new VueRouter({
             name: 'example-component',
             component: ExampleComponent,
         },
+        {
+            path: '/car-component',
+            name: 'car-component',
+            component: CarComponent,
+        }
     ],
 });
 

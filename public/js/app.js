@@ -47059,6 +47059,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_App__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ExampleComponent__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ExampleComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_ExampleComponent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_CarComponent__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_CarComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_CarComponent__);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -47091,12 +47093,17 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 
 
 
+
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     mode: 'history',
     routes: [{
         path: '/example-component',
         name: 'example-component',
         component: __WEBPACK_IMPORTED_MODULE_3__components_ExampleComponent___default.a
+    }, {
+        path: '/car-component',
+        name: 'car-component',
+        component: __WEBPACK_IMPORTED_MODULE_4__components_CarComponent___default.a
     }]
 });
 
@@ -50120,8 +50127,10 @@ module.exports = Component.exports
 
 /***/ }),
 /* 45 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
@@ -50135,6 +50144,9 @@ module.exports = Component.exports
 //
 //
 //
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 /* 46 */
@@ -50152,6 +50164,10 @@ var render = function() {
       [
         _c("router-link", { attrs: { to: { name: "example-component" } } }, [
           _vm._v("Example Component")
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: { name: "car-component" } } }, [
+          _vm._v("Car Component")
         ])
       ],
       1
@@ -50175,6 +50191,142 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(36)
+/* script */
+var __vue_script__ = __webpack_require__(54)
+/* template */
+var __vue_template__ = __webpack_require__(55)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/CarComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-471e5a18", Component.options)
+  } else {
+    hotAPI.reload("data-v-471e5a18", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+        this.getCars();
+    },
+
+    methods: {
+        getCars: function getCars() {
+            var _this = this;
+
+            axios.get('/get_cars').then(function (response) {
+                console.log(_this.cars);
+                _this.cars = response.data;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card card-default" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _vm._v("Car Component")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v(
+                "\n                    Estamos en el car component\n                "
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-471e5a18", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

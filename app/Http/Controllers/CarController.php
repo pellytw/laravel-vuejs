@@ -153,4 +153,11 @@ class CarController extends Controller
         return redirect('/cars')->with('success', 'El auto se ha eliminado correctamente');
     }
 
+
+
+    //Prueba para devolver un json
+    public function get_cars(){
+        return new CarCollection(Car::all());
+    }
+
 }
