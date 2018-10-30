@@ -17,7 +17,7 @@ class CarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
         //Todos estos ejemplos andan
@@ -25,18 +25,23 @@ class CarController extends Controller
         
         //ejemplos de uso
         //este use es para el ejemplo que hay aca abajo: use Illuminate\Support\Facades\DB;
-        //$cars = DB::table('cars')->paginate(5);
+        #$cars = DB::table('cars')->paginate(5);
 
         //$cars = Car::where('brand', 'ford', 100)->paginate(15);
 
-        //$cars = Car::where('brand', 'ford', 100)->paginate(15);
+        //filtra solo por marcas por ahora
+        $brand = $request -> input('query_filter');
+        
+        if ($brand){
+            $cars = Car::ofBrand($brand)->paginate(5);
+        }else{
+            $cars = Car::paginate(5);
+        }
 
-        $cars = Car::paginate(5);
 
         return view('cars.index', compact('cars'));
 
       
-
        // PARA DEVOLVER UN JSON USO ESTE RETURN
        // USAMOS API RESOURCES DE LA DOCUMENTACION OFICIAL. 
        // return new CarCollection(Car::all());
@@ -147,4 +152,5 @@ class CarController extends Controller
 
         return redirect('/cars')->with('success', 'El auto se ha eliminado correctamente');
     }
+
 }
