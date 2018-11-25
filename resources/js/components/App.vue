@@ -1,6 +1,97 @@
 <template>
     <div>
-        <h1>Vue Router Demo App</h1>
+
+      <!--NAVIGATION -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container">
+          <a href="#" class="navbar-brand">
+            LaravelProject
+          </a>
+          <button class="navbar-toggler" data-togle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="#home-section" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#info-section" class="nav-link">Info</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Create</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Share</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--HOME -->
+      <header id="home-section">
+        <div class="dark-overlay">
+          <div class="home-inner">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h1 class="display-4">Lorem <strong>ipsum</strong> dolor.</h1>
+                  <!-- ITEM -->
+                  <div class="d-flex flex-row">
+                    <div class="p-4">
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="p-4">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                  </div>
+                  <!-- ITEM -->
+                  <div class="d-flex flex-row">
+                    <div class="p-4">
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="p-4">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                  </div>
+                  <!-- ITEM -->
+                  <div class="d-flex flex-row">
+                    <div class="p-4">
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="p-4">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card text-center" style="background-color: #c0392b;">
+                    <div class="card-body">
+                      <h3>Lorem ipsum.</h3>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-control-lg" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control form-control-lg" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                        </div>
+                        <input type="submit" class="btn btn-outline-light btn-block" value="Send">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+        <!-- <h1>Vue Router Demo App</h1>
 
         <p>
             <router-link :to="{ name: 'example-component' }">Example Component</router-link>
@@ -9,9 +100,11 @@
 
         <div class="container">
             <router-view></router-view>
-        </div>
+        </div> -->
+
     </div>
 </template>
+
 <script>
     export default {}
 </script>
