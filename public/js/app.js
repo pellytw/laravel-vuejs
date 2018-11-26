@@ -50238,6 +50238,124 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -50432,6 +50550,184 @@ var staticRenderFns = [
                   )
                 ])
               ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "info-head-section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "text-center p-5" }, [
+              _c("h1", { staticClass: "display-4" }, [_vm._v("Info")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "lead" }, [
+                _vm._v(
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                )
+              ]),
+              _vm._v(" "),
+              _c("button", { staticClass: "btn btn-outline-secondary" }, [
+                _vm._v("\n            Lorem Ipsum is simply.\n          ")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        {
+          staticClass: "info-section bg-light text-muted py-5",
+          attrs: { id: "info-section" }
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("img", { attrs: { src: "/images/img1.png" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("h3", [_vm._v("Services and Products")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "d-flex flex-row" }, [
+                  _c("div", { staticClass: "p-4" }, [
+                    _c("i", { staticClass: "fas fa-certificate" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "p-4" }, [
+                    _vm._v(
+                      "\n              Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "d-flex flex-row" }, [
+                  _c("div", { staticClass: "p-4" }, [
+                    _c("i", { staticClass: "fas fa-certificate" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "p-4" }, [
+                    _vm._v(
+                      "\n              Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "d-flex flex-row" }, [
+                  _c("div", { staticClass: "p-4" }, [
+                    _c("i", { staticClass: "fas fa-certificate" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "p-4" }, [
+                    _vm._v(
+                      "\n              Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n            "
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("section", { staticClass: "bg-danger" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "text-center p-5" }, [
+              _c("h1", { staticClass: "display-4" }, [_vm._v("Info")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "lead" }, [
+                _vm._v(
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                { staticClass: "btn btn-outline-secondary text-white" },
+                [_vm._v("\n            Lorem Ipsum is simply.\n          ")]
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        {
+          staticClass: "info-section bg-light text-muted py-5",
+          attrs: { id: "info-section" }
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("h3", [_vm._v("Services and Products")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "d-flex flex-row" }, [
+                  _c("div", { staticClass: "p-4" }, [
+                    _c("i", { staticClass: "fas fa-certificate" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "p-4" }, [
+                    _vm._v(
+                      "\n              Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "d-flex flex-row" }, [
+                  _c("div", { staticClass: "p-4" }, [
+                    _c("i", { staticClass: "fas fa-certificate" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "p-4" }, [
+                    _vm._v(
+                      "\n              Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "d-flex flex-row" }, [
+                  _c("div", { staticClass: "p-4" }, [
+                    _c("i", { staticClass: "fas fa-certificate" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "p-4" }, [
+                    _vm._v(
+                      "\n              Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n            "
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("img", { attrs: { src: "/images/img2.png" } })
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("footer", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12 p-5" }, [
+            _c("p", { staticClass: "text-center" }, [
+              _vm._v("© Copyright 2018 - Playa Unión - Chubut")
             ])
           ])
         ])
