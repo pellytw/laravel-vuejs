@@ -10,6 +10,8 @@ use App\Http\Resources\Car as CarResource;
 
 use Illuminate\Support\Facades\DB;
 
+use PDF;
+
 class CarController extends Controller
 {
     /**
@@ -159,5 +161,19 @@ class CarController extends Controller
     public function get_cars(){
         return new CarCollection(Car::all());
     }
+
+
+
+    public function HtmlToPDF()
+    {
+       for ($i = 0; $i < 5; $i++) {
+        PDF::SetTitle('Hello World'.$i);
+        PDF::AddPage();
+        PDF::Write(0, 'Hello World'.$i);
+        PDF::Output(public_path('hello_world' . $i . '.pdf'), 'F');
+        PDF::reset();
+      }
+
+    }  
 
 }

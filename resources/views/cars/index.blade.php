@@ -49,6 +49,10 @@
     </tbody>
   </table>
 
+  <div class="form-group">
+    <a href="{{ route('HtmlToPDF') }}" class="btn btn-primary">Html To PDF</a>
+  </div>
+
 
   {{ $cars->links() }}
 
