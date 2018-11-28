@@ -9,6 +9,8 @@ use App\Http\Resources\CarCollection;
 use App\Http\Resources\Car as CarResource;
 
 use Illuminate\Support\Facades\DB;
+use Elibyy\TCPDF\Facades\TCPDF;
+use PDF;
 
 class CarController extends Controller
 {
@@ -160,4 +162,26 @@ class CarController extends Controller
         return new CarCollection(Car::all());
     }
 
+
+    public function openPDF()
+    {
+        $Cars = Car::orderBy('id','asc')->get();
+       
+        $view = \View::make('cars/carsPdf',['cars'=>$Cars]);
+        $html_content = $view->render();
+        PDF::SetTitle("List of cars");
+        PDF::AddPage();
+        PDF::writeHTML($html_content, true, false, true, false, '');
+        
+        PDF::Output('carlist.pdf');    
+    }
+
+    public function HtmlToPDF()
+    {
+         
+        PDF::SetTitle('Sample PDF');
+        PDF::AddPage();
+        PDF::writeHTML(view('HtmlToPDF')->render(), true, false, true, false, '');
+        PDF::Output('hello_world.pdf');
+    }  
 }
