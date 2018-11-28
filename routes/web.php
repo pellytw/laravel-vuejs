@@ -16,7 +16,7 @@
 // });
 
 
-Route::get('/viewpdf', 'Carcontroller@openPDF');
+Route::get('/viewpdf', 'CarController@openPDF');
 
 Route::resource('backend/cars', 'CarController');
 Route::get('html-to-pdf', ['as'=>'HtmlToPDF','uses'=>'CarController@htmlToPDF']);
