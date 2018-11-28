@@ -15,14 +15,14 @@
 //     return view('welcome');    
 // });
 
+
+Route::get('/viewpdf', 'Carcontroller@openPDF');
+
 Route::resource('backend/cars', 'CarController');
-Route::get('/html-to-pdf', ['as'=>'HtmlToPDF','uses'=>'CarController@htmlToPDF']);
-
-Auth::routes();
-
+Route::get('html-to-pdf', ['as'=>'HtmlToPDF','uses'=>'CarController@htmlToPDF']);
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Auth::routes();
 
 // para que ande con vue tengo que desactivar las rutas de arriba
 Route::get('/{any}', 'ExampleComponentController@index')->where('any', '.*');

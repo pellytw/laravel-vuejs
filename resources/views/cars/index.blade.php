@@ -51,6 +51,7 @@
 
   <div class="form-group">
     <a href="{{ route('HtmlToPDF') }}" class="btn btn-primary">Html To PDF</a>
+    <a href="/viewpdf" class="btn btn-primary btn-sm">Open PDF</a>
   </div>
 
 
