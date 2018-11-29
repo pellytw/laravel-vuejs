@@ -141,7 +141,7 @@
         </nav>
 
         <!-- Page Content  -->
-        <div id="content">
+        <div id="content" class="container-fluid">
           @yield('content')
         </div>
 
