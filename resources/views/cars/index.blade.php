@@ -36,12 +36,12 @@
               <td>{{$car->model}}</td>
               <td>{{$car->description}}</td>
               <td>{{$car->price}}</td>
-              <td><a href="{{ route('cars.edit',$car->id)}}" class="btn btn-primary btn-sm">Edit</a></td>
-              <td>
-                  <form action="{{ route('cars.destroy', $car->id)}}" method="post">
+              <td><a href="{{ route('cars.edit',$car->id)}}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+             
+                  <form action="{{ route('cars.destroy', $car->id)}}" method="post" style="display:inline;">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                    <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash-alt"></i></button>
                   </form>
               </td>
           </tr>
