@@ -24,16 +24,18 @@
 <body>
   <div id="app">
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+
       <div class="container">
+
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+          {{ config('app.name', 'Laravel') }}
         </a>
         
         <button type="button" id="sidebarCollapse" class="btn btn-info">
-            <i class="fas fa-align-left"></i>
-            <span></span>
+          <i class="fas fa-align-left"></i>
+          <span></span>
         </button>
- 
+                   
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -84,7 +86,7 @@
 
       
 
-      <main class="">
+      <div class="">
         <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -140,12 +142,12 @@
 
         <!-- Page Content  -->
         <div id="content">
-            @yield('content')
+          @yield('content')
         </div>
 
         </div>
 
-        
+      </div>
 
 
 
@@ -171,7 +173,7 @@
             @yield('content')            
           </div>
         </div> -->
-      </main>
+
 
   </div>
 </body>
