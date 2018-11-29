@@ -37,7 +37,7 @@ class CarController extends Controller
         if ($brand){
             $cars = Car::ofBrand($brand)->paginate(5);
         }else{
-            $cars = Car::paginate(5);
+            $cars = Car::paginate(20);
         }
 
 
@@ -175,13 +175,4 @@ class CarController extends Controller
         
         PDF::Output('carlist.pdf');    
     }
-
-    public function HtmlToPDF()
-    {
-         
-        PDF::SetTitle('Sample PDF');
-        PDF::AddPage();
-        PDF::writeHTML(view('HtmlToPDF')->render(), true, false, true, false, '');
-        PDF::Output('hello_world.pdf');
-    }  
 }

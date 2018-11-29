@@ -36,12 +36,12 @@
               <td>{{$car->model}}</td>
               <td>{{$car->description}}</td>
               <td>{{$car->price}}</td>
-              <td><a href="{{ route('cars.edit',$car->id)}}" class="btn btn-primary">Edit</a></td>
+              <td><a href="{{ route('cars.edit',$car->id)}}" class="btn btn-primary btn-sm">Edit</a></td>
               <td>
                   <form action="{{ route('cars.destroy', $car->id)}}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Delete</button>
+                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                   </form>
               </td>
           </tr>
@@ -50,9 +50,8 @@
     </table>
   </div>
 
-  <div class="form-group">
-    <a href="{{ route('HtmlToPDF') }}" class="btn btn-primary">Html To PDF</a>
-    <a href="/viewpdf" class="btn btn-primary btn-sm">Open PDF</a>
+  <div class="form-group">    
+    <a href="{{ route('viewpdf') }}" class="btn btn-primary btn-sm">Open PDF</a>
   </div>
 
 
