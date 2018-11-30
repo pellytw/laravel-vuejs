@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="panel">
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
@@ -16,42 +16,42 @@
   </form>
 
   <br>
+  <div class="table-responsive">
+    <table class="table-project">
+      <thead>
+          <tr>
+            <td>Id</td>
+            <td>Marca</td>
+            <td>Modelo</td>
+            <td>Descripción</td>
+            <td>Precio</td>
+            <td colspan="2">Action</td>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach($cars as $car)
+          <tr>
+              <td>{{$car->id}}</td>
+              <td>{{$car->brand}}</td>
+              <td>{{$car->model}}</td>
+              <td>{{$car->description}}</td>
+              <td>{{$car->price}}</td>
+              <td><a href="{{ route('cars.edit',$car->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a></td>
+              <td>
+                  <form action="{{ route('cars.destroy', $car->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash-alt"></i></button>
+                  </form>
+              </td>
+          </tr>
+          @endforeach
+      </tbody>
+    </table>
+  </div>
 
-  <table class="table table-striped">
-    <thead>
-        <tr>
-          <td>Id</td>
-          <td>Marca</td>
-          <td>Modelo</td>
-          <td>Descripción</td>
-          <td>Precio</td>
-          <td colspan="2">Action</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($cars as $car)
-        <tr>
-            <td>{{$car->id}}</td>
-            <td>{{$car->brand}}</td>
-            <td>{{$car->model}}</td>
-            <td>{{$car->description}}</td>
-            <td>{{$car->price}}</td>
-            <td><a href="{{ route('cars.edit',$car->id)}}" class="btn btn-primary">Edit</a></td>
-            <td>
-                <form action="{{ route('cars.destroy', $car->id)}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
-  </table>
-
-  <div class="form-group">
-    <a href="{{ route('HtmlToPDF') }}" class="btn btn-primary">Html To PDF</a>
-    <a href="/viewpdf" class="btn btn-primary btn-sm">Open PDF</a>
+  <div class="form-group">    
+    <a href="{{ route('viewpdf') }}" class="btn btn-primary btn-sm">Open PDF</a>
   </div>
 
 

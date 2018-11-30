@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="panel">
   <div class="card">
     <div class="card-header">
       Editar auto {{ $car->id }}

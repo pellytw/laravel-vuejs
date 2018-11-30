@@ -1919,29 +1919,37 @@ pre code {
   }
 }
 
-.table {
+.table,
+.table-project {
   width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
 }
 
 .table th,
-.table td {
+.table-project th,
+.table td,
+.table-project td {
   padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
 }
 
-.table thead th {
+.table thead th,
+.table-project thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
 }
 
-.table tbody + tbody {
+.table tbody + tbody,
+.table-project tbody + tbody {
   border-top: 2px solid #dee2e6;
 }
 
-.table .table {
+.table .table,
+.table-project .table,
+.table .table-project,
+.table-project .table-project {
   background-color: #f8fafc;
 }
 
@@ -1950,17 +1958,22 @@ pre code {
   padding: 0.3rem;
 }
 
-.table-bordered {
+.table-bordered,
+.table-project {
   border: 1px solid #dee2e6;
 }
 
 .table-bordered th,
-.table-bordered td {
+.table-project th,
+.table-bordered td,
+.table-project td {
   border: 1px solid #dee2e6;
 }
 
 .table-bordered thead th,
-.table-bordered thead td {
+.table-project thead th,
+.table-bordered thead td,
+.table-project thead td {
   border-bottom-width: 2px;
 }
 
@@ -1971,7 +1984,8 @@ pre code {
   border: 0;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
+.table-striped tbody tr:nth-of-type(odd),
+.table-project tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -2114,13 +2128,15 @@ pre code {
   background-color: rgba(0, 0, 0, 0.075);
 }
 
-.table .thead-dark th {
+.table .thead-dark th,
+.table-project .thead-dark th {
   color: #f8fafc;
   background-color: #212529;
   border-color: #32383e;
 }
 
-.table .thead-light th {
+.table .thead-light th,
+.table-project .thead-light th {
   color: #495057;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -2137,11 +2153,13 @@ pre code {
   border-color: #32383e;
 }
 
-.table-dark.table-bordered {
+.table-dark.table-bordered,
+.table-dark.table-project {
   border: 0;
 }
 
-.table-dark.table-striped tbody tr:nth-of-type(odd) {
+.table-dark.table-striped tbody tr:nth-of-type(odd),
+.table-dark.table-project tbody tr:nth-of-type(odd) {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -2158,7 +2176,8 @@ pre code {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
-  .table-responsive-sm > .table-bordered {
+  .table-responsive-sm > .table-bordered,
+  .table-responsive-sm > .table-project {
     border: 0;
   }
 }
@@ -2172,7 +2191,8 @@ pre code {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
-  .table-responsive-md > .table-bordered {
+  .table-responsive-md > .table-bordered,
+  .table-responsive-md > .table-project {
     border: 0;
   }
 }
@@ -2186,7 +2206,8 @@ pre code {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
-  .table-responsive-lg > .table-bordered {
+  .table-responsive-lg > .table-bordered,
+  .table-responsive-lg > .table-project {
     border: 0;
   }
 }
@@ -2200,7 +2221,8 @@ pre code {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
-  .table-responsive-xl > .table-bordered {
+  .table-responsive-xl > .table-bordered,
+  .table-responsive-xl > .table-project {
     border: 0;
   }
 }
@@ -2213,7 +2235,8 @@ pre code {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.table-responsive > .table-bordered {
+.table-responsive > .table-bordered,
+.table-responsive > .table-project {
   border: 0;
 }
 
@@ -10435,17 +10458,22 @@ a.text-dark:focus {
     border: 1px solid #000;
   }
 
-  .table {
+  .table,
+  .table-project {
     border-collapse: collapse !important;
   }
 
   .table td,
-  .table th {
+  .table-project td,
+  .table th,
+  .table-project th {
     background-color: #fff !important;
   }
 
   .table-bordered th,
-  .table-bordered td {
+  .table-project th,
+  .table-bordered td,
+  .table-project td {
     border: 1px solid #dee2e6 !important;
   }
 
@@ -10460,7 +10488,8 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 
-  .table .thead-dark th {
+  .table .thead-dark th,
+  .table-project .thead-dark th {
     color: inherit;
     border-color: #dee2e6;
   }
