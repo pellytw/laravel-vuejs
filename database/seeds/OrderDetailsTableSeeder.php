@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CarsTableSeeder extends Seeder
+class OrderDetailsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class CarsTableSeeder extends Seeder
      */
     public function run()
     {
-         $cars = factory(App\Car::class, 50)->create();
+         $order_details = factory(App\OrderDetail::class, 10)->create();
     }
 }
