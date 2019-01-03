@@ -35,7 +35,8 @@ class CarController extends Controller
         $brand = $request -> input('query_filter');
         
         if ($brand){
-            $cars = Car::ofBrand($brand)->paginate(5);
+            // $cars = Car::ofBrand($brand)->paginate(5);
+            $cars = Car::where('brand', 'like', '%'.$brand.'%')->paginate(20);
         }else{
             $cars = Car::paginate(20);
         }
