@@ -84,7 +84,7 @@ class CarController extends Controller
         'price'=> $request->get('price')
       ]);
       $car->save();
-      return redirect('/cars')->with('success', 'El auto se ha creado correctamente');
+      return redirect('/backend/cars')->with('success', 'El auto se ha creado correctamente');
     }
 
     /**
@@ -138,7 +138,7 @@ class CarController extends Controller
       $car->price = $request->get('price');
       $car->save();
 
-      return redirect('/cars')->with('success', 'El auto se ha actualizado correctamente');
+      return redirect('/backend/cars')->with('success', 'El auto se ha actualizado correctamente');
     }
 
     /**
@@ -152,7 +152,7 @@ class CarController extends Controller
         $car = Car::find($id);
         $car->delete();
 
-        return redirect('/cars')->with('success', 'El auto se ha eliminado correctamente');
+        return redirect('/backend/cars')->with('success', 'El auto se ha eliminado correctamente');
     }
 
 
